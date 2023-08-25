@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import store from "../store";
 
 function formatCurrency(value) {
   return new Intl.NumberFormat("en", {
@@ -17,4 +18,5 @@ function mapStateToProps(store) {
   };
 }
 
+console.log(store.account);
 export default connect(mapStateToProps)(BalanceDisplay);
